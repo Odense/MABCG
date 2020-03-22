@@ -54,17 +54,14 @@ public class Skeleton extends JPanel  implements ActionListener {
                 RenderingHints.VALUE_RENDER_QUALITY);
 
         // Створення малюнку
-
         bs1 = new BasicStroke(5, BasicStroke.CAP_ROUND,
                 BasicStroke.JOIN_BEVEL);
         g2d.setStroke(bs1);
         int xPoints[] = new int[] {100, 130, 220, 250};
         int yPoints[] = new int[] {100, 200, 200, 100};
-        //g2d.drawPolyline(xPoints, yPoints, xPoints.length);
 
         GradientPaint gp = new GradientPaint(5, 25,
                 Color.MAGENTA, 20, 2, Color.ORANGE, true);
-        //g2d.setPaint(gp);
         double points[][] = {
                 { 140, 180 }, { 210, 180 }, { 175, 105 }, { 140, 180 }
         };
@@ -73,10 +70,6 @@ public class Skeleton extends JPanel  implements ActionListener {
         for (int k = 1; k < points.length; k++)
             triangle.lineTo(points[k][0], points[k][1]);
         triangle.closePath();
-
-        //g2d.setColor(Color.BLUE);
-        //g2d.drawLine(120, 105, 150, 105);
-        //g2d.drawLine(200, 105, 230, 105);
 
         // Перетворення для анімації повороту
         g2d.rotate(angle, 220, 200);
